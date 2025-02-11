@@ -5,7 +5,6 @@ import SuccessStories from "@/components/SuccessStories";
 import Technologies from "@/components/Technologies";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 
 export default function Home() {
