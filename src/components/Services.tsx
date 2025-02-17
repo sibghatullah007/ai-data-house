@@ -75,7 +75,13 @@ const Services = () => {
 };
 
 // Service Card Component
-const ServiceCard = ({ title, description, icon }) => {
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
   return (
     <div className="bg-white shadow-lg p-4 md:p-6 rounded-lg flex items-center space-x-4">
       <div className="flex-shrink-0">{icon}</div>
