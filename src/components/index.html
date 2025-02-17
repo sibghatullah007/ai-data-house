@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Orbits with Stable Items</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .center {
+            width: 80px;
+            height: 80px;
+            background-color: #1ca99d;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+
+        .center img {
+            width: 50%;
+        }
+
+        /* Orbit Styling */
+        .orbit {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            animation: rotate 10s linear infinite;
+        }
+
+        /* Different Sizes for Each Orbit */
+        .orbit1 { width: 150px; height: 150px; }
+        .orbit2 { width: 220px; height: 220px; }
+        .orbit3 { width: 300px; height: 300px; }
+
+        /* Item Styling */
+        .item {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform-origin: center;
+        }
+
+        /* Position Each Item at the Start of its Orbit */
+        .orbit1 .item { top: -30px; left: 50%; transform: translateX(-50%); }
+        .orbit2 .item { bottom: -30px; left: 50%; transform: translateX(-50%); }
+        .orbit3 .item:nth-child(1) { left: -30px; top: 50%; transform: translateY(-50%); }
+        .orbit3 .item:nth-child(2) { right: -30px; top: 50%; transform: translateY(-50%); }
+
+        /* Green Dot Styling */
+        .dot {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #1ca99d;
+            border-radius: 50%;
+            transform-origin: center;
+        }
+
+        /* Positioning Green Dots */
+        .orbit1 .dot:nth-child(2) {
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+}
+
+.orbit2 .dot:nth-child(2) {
+    top: 19px;
+    left: 18%;
+    transform: translateX(-50%);
+}
+
+.orbit2 .dot:nth-child(3) {
+    right: 24px;
+    top: 84%;
+    transform: translateY(-50%);
+}
+
+.orbit3 .dot:nth-child(3) {
+    right: 50px;
+    top: 9%;
+}
+
+.orbit3 .dot:nth-child(4) {
+    left: 45px;
+    bottom: 10%;
+}
+
+        /* Counter-Rotation */
+        .orbit .item img {
+            width: 30px;
+            animation: counter-rotate 10s linear infinite;
+        }
+
+        /* Rotation Animation */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Counter-Rotation Animation */
+        @keyframes counter-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="center">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="AI">
+    </div>
+
+    <!-- Orbit 1 -->
+    <div class="orbit orbit1">
+        <div class="item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3050/3050142.png" width="30">
+        </div>
+        <div class="dot"></div>
+    </div>
+
+    <!-- Orbit 2 -->
+    <div class="orbit orbit2">
+        <div class="item">
+            <img src="https://cdn-icons-png.flaticon.com/512/4271/4271227.png" width="30">
+        </div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+    <!-- Orbit 3 (Now has 2 items + green dots) -->
+    <div class="orbit orbit3">
+        <div class="item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" width="30">
+        </div>
+        <div class="item">
+            <img src="https://cdn-icons-png.flaticon.com/512/4783/4783016.png" width="30">
+        </div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+
+</body>
+</html>

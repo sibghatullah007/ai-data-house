@@ -14,3 +14,137 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.center {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.center img {
+  width: 100%;
+}
+
+/* Orbit Styling */
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  animation: rotate 10s linear infinite;
+}
+
+/* Different Sizes for Each Orbit */
+/* Orbit 3: fills the container */
+.orbit3 {
+  width: 100%;
+  height: auto;           /* height is automatically set due to aspect-ratio */
+  aspect-ratio: 1;        /* Ensures a perfect square/circle */
+}
+
+/* Orbit 2: 73.33% of orbit3's width */
+.orbit2 {
+  width: 73.33%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* Orbit 1: 50% of orbit3's width */
+.orbit1 {
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* Item Styling */
+.item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+}
+@media (min-width: 768px) {
+  .item {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item {
+    width: 90px;
+    height: 90px;
+  }
+}
+/* Position Each Item at the Start of its Orbit */
+.orbit1 .item { top: -30px; left: 50%; transform: translateX(-50%); }
+.orbit2 .item { bottom: -30px; left: 50%; transform: translateX(-50%); }
+.orbit3 .item:nth-child(1) { left: -30px; top: 50%; transform: translateY(-50%); }
+.orbit3 .item:nth-child(2) { right: -30px; top: 50%; transform: translateY(-50%); }
+
+/* Green Dot Styling */
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #1ca99d;
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+/* Positioning Green Dots */
+.orbit1 .dot:nth-child(2) {
+top: 50%;
+left: -6px;
+transform: translateY(-50%);
+}
+
+.orbit2 .dot:nth-child(2) {
+  top: 15px;
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+.orbit2 .dot:nth-child(3) {
+  right: 7px;
+  top: 72%;
+  transform: translateY(-50%);
+}
+
+.orbit3 .dot:nth-child(3) {
+  top: -7px;
+  right: 50%;
+}
+
+.orbit3 .dot:nth-child(4) {
+  left: 9%;
+  bottom: 18%;
+}
+
+/* Counter-Rotation */
+.orbit .item img {
+  width: 30px;
+  animation: counter-rotate 10s linear infinite;
+}
+
+/* Rotation Animation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Counter-Rotation Animation */
+@keyframes counter-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}

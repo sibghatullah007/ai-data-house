@@ -1,5 +1,6 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { FaDatabase, FaComments, FaBrain, FaCogs } from "react-icons/fa";
+import OrbitAnimation from "./OrbitAnimation";
 
 const Services = () => {
   return (
@@ -21,13 +22,14 @@ const Services = () => {
       {/* Main Content */}
       <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Circular Graphic */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Image
+        <div className="flex items-center justify-center w-[100%] md:w-1/2">
+          {/* <Image
             src="/services-graphic.png" // Replace with actual image path
             alt="Services Graphic"
             width={400}
             height={400}
-          />
+          /> */}
+                <OrbitAnimation/>
         </div>
 
         {/* Services List */}

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,12 @@ export default function Header() {
       <div className="mx-auto flex justify-between items-center w-full">
 
         <Link href="/" className="text-xl font-bold text-green-900 px-4">
-          AD House
+          <Image
+            src="/logo.png" 
+            alt="Services Graphic"
+            width={70}
+            height={50}
+          />
         </Link>
 
         <nav className="hidden md:flex space-x-6 text-gray-800 font-medium">
