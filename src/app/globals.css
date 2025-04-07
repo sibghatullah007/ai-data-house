@@ -17,8 +17,8 @@ body {
 
 
 .center {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -97,7 +97,7 @@ body {
   position: absolute;
   width: 12px;
   height: 12px;
-  background-color: #1ca99d;
+  background-color: #02713a;
   border-radius: 50%;
   transform-origin: center;
 }
@@ -133,7 +133,7 @@ transform: translateY(-50%);
 
 /* Counter-Rotation */
 .orbit .item img {
-  width: 30px;
+  width: 35px;
   animation: counter-rotate 10s linear infinite;
 }
 
@@ -147,4 +147,34 @@ transform: translateY(-50%);
 @keyframes counter-rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
+}
+
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s forwards;
+  }
+
+  .animate-fadeSlideIn {
+    animation: fadeSlideIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 }

@@ -23,12 +23,6 @@ const Services = () => {
       <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Circular Graphic */}
         <div className="flex items-center justify-center w-[100%] md:w-1/2">
-          {/* <Image
-            src="/services-graphic.png" // Replace with actual image path
-            alt="Services Graphic"
-            width={400}
-            height={400}
-          /> */}
                 <OrbitAnimation/>
         </div>
 
@@ -37,22 +31,22 @@ const Services = () => {
           <ServiceCard
             title="Data Engineering"
             description="Design and optimize data pipelines to power intelligent business solutions."
-            icon={<FaDatabase className="text-green-700 text-2xl" />}
+            icon={<FaDatabase className="text-green-700 text-[4.5rem]" />}
           />
           <ServiceCard
             title="Chatbot Development"
             description="Develop intelligent chatbots for seamless and engaging communication."
-            icon={<FaComments className="text-green-700 text-2xl" />}
+            icon={<FaComments className="text-green-700 text-[4.5rem]" />}
           />
           <ServiceCard
             title="Artificial Intelligence"
             description="Leverage custom AI models to solve complex business challenges."
-            icon={<FaBrain className="text-green-700 text-2xl" />}
+            icon={<FaBrain className="text-green-700 text-[4.5rem]" />}
           />
           <ServiceCard
             title="Integration and Automation"
             description="Connect systems and automate workflows for maximum efficiency."
-            icon={<FaCogs className="text-green-700 text-2xl" />}
+            icon={<FaCogs className="text-green-700 text-[4.5rem]" />}
           />
         </div>
       </div>
@@ -83,12 +77,12 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
   return (
-    <div className="bg-white shadow-lg p-4 md:p-6 rounded-lg flex items-center space-x-4">
-      <div className="flex-shrink-0">{icon}</div>
+    <div className="bg-white shadow-lg p-4 md:p-6 rounded-lg flex items-center justify-between ">
       <div>
         <h4 className="font-semibold text-green-900 text-lg">{title}</h4>
         <p className="text-gray-600 text-sm">{description}</p>
       </div>
+      <div className="flex-shrink-0">{icon}</div>
     </div>
   );
 };
