@@ -61,7 +61,22 @@ const SuccessStories = () => {
   const currentStory = stories[currentIndex];
 
   return (
-    <section className="bg-green-800 text-white px-6 pt-12 rounded-3xl relative overflow-hidden">
+    <section className="bg-green-800 text-white px-6 md:pt-8 rounded-3xl relative overflow-hidden">
+      {/* Arrows */}
+      <div className="flex justify-center gap-2 my-8 md:absolute top-[0px] right-10 z-30">
+        <button
+          onClick={handlePrev}
+          className="flex w-10 h-10 rounded-full bg-white text-green-800 hover:bg-gray-200 transition justify-center items-center"
+        >
+          <FaArrowLeft />
+        </button>
+        <button
+          onClick={handleNext}
+          className="flex w-10 h-10 rounded-full bg-white text-green-800 hover:bg-gray-200 transition justify-center items-center"
+        >
+          <FaArrowRight />
+        </button>
+      </div>
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-12">
         <h2 className="text-2xl md:text-3xl font-bold">
@@ -77,9 +92,8 @@ const SuccessStories = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 transition-all duration-500 ease-in-out">
         {/* Text Content */}
         <div
-          className={`flex-1 transform transition-all duration-700 ${
-            animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-          }`}
+          className={`flex-1 transform transition-all duration-700 ${animate ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
         >
           <h3 className="text-2xl font-bold mb-2">{currentStory.title}</h3>
           <h4 className="text-lg font-semibold mb-4">{currentStory.subtitle}</h4>
@@ -90,34 +104,17 @@ const SuccessStories = () => {
 
         {/* Image */}
         <div
-          className={`flex-1 transition-opacity duration-700 ${
-            animate ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`flex-1 transition-opacity duration-700 ${animate ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <Image
             src={currentStory.image}
             alt={currentStory.title}
-            className="rounded-xl shadow-lg"
+            className=""
             width={600}
             height={400}
           />
         </div>
-      </div>
-
-      {/* Arrows */}
-      <div className="flex justify-center gap-2 mt-12 absolute top-[-20px] right-10 z-30">
-        <button
-          onClick={handlePrev}
-          className="flex w-10 h-10 rounded-full bg-white text-green-800 hover:bg-gray-200 transition justify-center items-center"
-        >
-          <FaArrowLeft />
-        </button>
-        <button
-          onClick={handleNext}
-          className="flex w-10 h-10 rounded-full bg-white text-green-800 hover:bg-gray-200 transition justify-center items-center"
-        >
-          <FaArrowRight />
-        </button>
       </div>
     </section>
   );

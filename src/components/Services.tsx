@@ -60,7 +60,7 @@ const Services = () => {
           Streamline operations and enhance customer engagement with our AI, Data Engineering,
           Chatbot Development, and Automation solutions. Let’s take your business to the next level!
         </p>
-        <button className="mt-4 bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800">
+        <button className="mt-4 bg-light-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition">
           Let's Get Started
         </button>
       </div>

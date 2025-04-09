@@ -178,3 +178,24 @@ transform: translateY(-50%);
     }
   }
 }
+
+/* For Chrome, Safari and Edge */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5); /* Customize thumb color */
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Or any color */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
