@@ -1,7 +1,17 @@
 const Page = () => {
   return (
-    <div className=''>Page</div>
-  )
+    <>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+      <div className=''>Career Page</div>
+    </>  
+    )
 }
 
 export default Page
