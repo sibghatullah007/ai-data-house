@@ -12,7 +12,7 @@ export default function ConditionalLayout({ children }: { children: React.ReactN
 
   return (
     <div>
-      {pathname === "/contact" ? (
+      {pathname === "/contact" || pathname === "/thank-you"  ? (
         <>
           {children}
         </>
