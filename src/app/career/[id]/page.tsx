@@ -4,15 +4,16 @@ import { jobs, Job } from "../../career/data"
 
 type Props = {
   params: { id: string }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
-export default function Page({ params }: Props) {
+export default async function Page({ params }: Props) {
   const job = jobs.find((job: Job) => job.id === params.id)
-
+  
   if (!job) {
     notFound()
   }
-
+  
   return (
     <>
       <section className="bg-white shadow-lg border-b border-gray-400 pt-20 pb-12 text-center">
@@ -22,7 +23,7 @@ export default function Page({ params }: Props) {
           width={70}
           height={50}
           className="mx-auto my-3"
-        />
+        />      
         <h2 className="text-2xl font-semibold text-green-800 mt-2">{job.title}</h2>
 
         <div className="flex justify-center flex-wrap gap-x-4 gap-y-1 mt-4 text-gray-600 font-medium">
@@ -33,6 +34,7 @@ export default function Page({ params }: Props) {
 
         <p className="text-green-900 mt-2 font-medium">{job.location}</p>
       </section>
+      
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
           {/* Left Column - Job Description */}
@@ -78,13 +80,13 @@ export default function Page({ params }: Props) {
             {/* How to Apply */}
             <div>
               <h2 className="text-lg font-semibold text-green-800 mb-2">How to Apply:</h2>
-              <p className="text-gray-700">
+              <div className="text-gray-700">
                 <div className="text-gray-900">
                   {job.status === 'active'
                     ? <> Submit your application at <a href="mailto:career@aidatahouse.com" className="text-green-600 underline">career@aidatahouse.com</a>.</>
                     : <span className="text-red-500 font-bold text-[16px]">(Application have been Closed)</span>}
                 </div>
-              </p>
+              </div>
             </div>
           </div>
 
@@ -101,7 +103,6 @@ export default function Page({ params }: Props) {
           </div>
         </div>
       </section>
-
     </>
   )
 }

@@ -10,8 +10,8 @@ const categories = [
   'All Categories',
   'Data Engineering',
   'AI Development',
-  'Chatbot Development',
   'Software Engineering',
+  'Chatbot Development',
 ];
 
 type Props = {
@@ -131,7 +131,7 @@ const JobListings = ({ initialJobs }: JobListingsProps) => {
                 <div className="text-xs text-gray-500">
                   {job.status === 'active'
                     ? <>Posted {formatDistanceToNow(job.posted, { addSuffix: true })}</>
-                    : <span className="text-red-500 font-bold">(Application have been Closed)</span>}
+                    : <span className="text-red-500 font-bold">(closed)</span>}
                 </div>
 
                 <ArrowUpRight className="absolute top-4 right-4 w-5 h-5 text-green-700" />

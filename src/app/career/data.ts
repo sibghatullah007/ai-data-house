@@ -24,20 +24,21 @@ export const jobs: Job[] = [
       "location": "Islamabad, Pakistan",
       "posted":  new Date(Date.now()),
       "status": "active",
-      "description": "Architect and manage scalable data pipelines, collaborate with teams to ensure high data quality, and drive data strategy across the organization.",
+      "description": "We are seeking a Senior Data Engineer to join our team. In this role, you will design, build, and maintain scalable data pipelines and infrastructure, ensuring data reliability and accessibility across our organization.",
       "responsibilities": [
-        "Design and develop data pipelines and ETL frameworks",
-        "Collaborate with analytics and engineering teams",
-        "Optimize data systems and build scalable solutions",
-        "Maintain data governance and security protocols",
-        "Mentor junior team members"
+        "Design and implement data models, ETL pipelines, and data integration solutions",
+        "Optimize and improve existing data systems for performance, reliability, and scalability",
+        "Develop and maintain data warehousing solutions",
+        "Collaborate with data scientists and analysts to deliver data-driven insights",
+        "Implement data governance and security protocols"
       ],
       "requirements": [
-        "Bachelor\u2019s or Master\u2019s in Computer Science or related field",
-        "5+ years experience in data engineering",
-        "Expertise in Python, SQL, Spark, and cloud platforms",
-        "Strong problem-solving and communication skills",
-        "Experience with Airflow and data warehousing tools"
+        "5+ years of experience in data engineering or similar role",
+        "Strong SQL skills and experience with data warehousing concepts",
+        "Proficiency in Python, Scala, or similar programming languages",
+        "Experience with big data technologies (Hadoop, Spark, Kafka)",
+        "Knowledge of cloud platforms (AWS, Azure, or GCP)",
+        "Strong problem-solving skills and attention to detail"
       ]
     },
     {
@@ -49,20 +50,21 @@ export const jobs: Job[] = [
       "location": "Islamabad, Pakistan",
       "posted":  new Date(Date.now() - 1 * 60 * 60 * 1000),
       "status": "active",
-      "description": "Support data initiatives by generating reports, conducting exploratory analysis, and translating business needs into actionable insights.",
+      "description": "We are looking for a Junior Data Analyst to support our data team in gathering, processing, and analyzing data to help drive business decisions. This is an excellent opportunity for someone starting their career in data analytics.",
       "responsibilities": [
-        "Analyze datasets to uncover trends and patterns",
-        "Prepare dashboards and reports using BI tools",
-        "Collaborate with business units for data needs",
-        "Assist in data cleaning and preprocessing",
-        "Document processes and analysis results"
+        "Collect and process data from various sources",
+        "Create reports and visualizations to communicate findings",
+        "Assist in developing and maintaining dashboards",
+        "Support data quality assurance processes",
+        "Help identify trends and insights from data analysis"
       ],
       "requirements": [
-        "Bachelor\u2019s in Statistics, Economics, or related field",
-        "1+ years of experience in a similar role",
-        "Knowledge of Excel, SQL, and Tableau/PowerBI",
-        "Analytical mindset and attention to detail",
-        "Good communication and teamwork skills"
+        "Bachelor's degree in Statistics, Mathematics, Computer Science, or related field",
+        "Basic knowledge of SQL and data manipulation",
+        "Familiarity with data visualization tools (Power BI, Tableau)",
+        "Strong analytical and problem-solving skills",
+        "Good communication and presentation abilities",
+        "Attention to detail and accuracy"
       ]
     },
     {
@@ -74,20 +76,21 @@ export const jobs: Job[] = [
       "location": "Islamabad, Pakistan",
       "posted": new Date("2025-04-11T14:00:00"),
       "status": "active",
-      "description": "Join our team as a AI Research Scientist and work on cutting-edge projects in the AI Development domain, delivering impactful results in a collaborative environment.",
+      "description": "Join our AI Research team to advance the state-of-the-art in artificial intelligence. You will conduct innovative research and develop novel AI algorithms and models to address complex problems.",
       "responsibilities": [
-        "Develop and maintain solutions in the field of AI Development",
-        "Collaborate with cross-functional teams to define and implement new features",
-        "Participate in code reviews and system design discussions",
-        "Continuously improve system performance and scalability",
-        "Stay updated with the latest industry trends"
+        "Conduct research in machine learning, deep learning, and other AI domains",
+        "Develop and implement novel algorithms and approaches",
+        "Publish research findings in top-tier conferences and journals",
+        "Collaborate with engineering teams to implement research into products",
+        "Stay current with latest advances in AI and machine learning"
       ],
       "requirements": [
-        "Bachelor\u2019s degree in a relevant technical field",
-        "2+ years of industry experience",
-        "Experience with tools and technologies used in AI Development",
-        "Strong analytical and problem-solving skills",
-        "Ability to work independently and as part of a team"
+        "PhD or MS in Computer Science, Machine Learning, or related field",
+        "Strong publication record or demonstrated research ability",
+        "Experience with deep learning frameworks (PyTorch, TensorFlow)",
+        "Solid programming skills in Python",
+        "Knowledge of natural language processing, computer vision, or reinforcement learning",
+        "Excellent analytical and problem-solving abilities"
       ]
     },
     {
@@ -99,20 +102,21 @@ export const jobs: Job[] = [
       "location": "Islamabad, Pakistan",
       "posted": new Date("2025-04-11T14:00:00"),
       "status": "active",
-      "description": "Join our team as a Full Stack Developer and work on cutting-edge projects in the Software Engineering domain, delivering impactful results in a collaborative environment.",
+      "description": "We are looking for a Full Stack Developer to build and maintain web applications. You will work on both frontend and backend development to create seamless user experiences and robust application functionality.",
       "responsibilities": [
-        "Develop and maintain solutions in the field of Software Engineering",
-        "Collaborate with cross-functional teams to define and implement new features",
-        "Participate in code reviews and system design discussions",
-        "Continuously improve system performance and scalability",
-        "Stay updated with the latest industry trends"
+        "Develop responsive and user-friendly web interfaces using modern frameworks",
+        "Build and maintain server-side applications and APIs",
+        "Implement database designs and data models",
+        "Ensure cross-platform optimization and compatibility",
+        "Collaborate with design and product teams to implement features"
       ],
       "requirements": [
-        "Bachelor\u2019s degree in a relevant technical field",
-        "2+ years of industry experience",
-        "Experience with tools and technologies used in Software Engineering",
-        "Strong analytical and problem-solving skills",
-        "Ability to work independently and as part of a team"
+        "3+ years experience in full stack development",
+        "Proficiency in frontend technologies (HTML, CSS, JavaScript, React/Angular/Vue)",
+        "Experience with backend frameworks (Node.js, Django, Ruby on Rails)",
+        "Knowledge of database systems (SQL and NoSQL)",
+        "Familiarity with version control systems (Git)",
+        "Strong problem-solving skills and attention to detail"
       ]
     },
     {
@@ -124,20 +128,21 @@ export const jobs: Job[] = [
       "location": "Islamabad, Pakistan",
       "posted": new Date("2025-04-11T14:00:00"),
       "status": "active",
-      "description": "Join our team as a Data Architect and work on cutting-edge projects in the Data Engineering domain, delivering impactful results in a collaborative environment.",
+      "description": "We are seeking an experienced Data Architect to design and implement our data management systems. You will be responsible for defining data structures, models, and integration patterns across our organization.",
       "responsibilities": [
-        "Develop and maintain solutions in the field of Data Engineering",
-        "Collaborate with cross-functional teams to define and implement new features",
-        "Participate in code reviews and system design discussions",
-        "Continuously improve system performance and scalability",
-        "Stay updated with the latest industry trends"
+        "Design comprehensive data architecture solutions",
+        "Create and maintain data models and schemas",
+        "Establish data governance policies and procedures",
+        "Guide implementation of data management solutions",
+        "Ensure data quality, security, and compliance"
       ],
       "requirements": [
-        "Bachelor\u2019s degree in a relevant technical field",
-        "2+ years of industry experience",
-        "Experience with tools and technologies used in Data Engineering",
-        "Strong analytical and problem-solving skills",
-        "Ability to work independently and as part of a team"
+        "7+ years of experience in data architecture or similar roles",
+        "Strong understanding of data modeling techniques",
+        "Experience with data warehousing and business intelligence",
+        "Knowledge of big data technologies and cloud platforms",
+        "Excellent communication and stakeholder management skills",
+        "Certifications in data management a plus"
       ]
     },
     {
@@ -516,4 +521,34 @@ export const jobs: Job[] = [
       ]
     }
   ]; 
+
+// Add default values for remaining jobs (will display generic content)
+for (let i = 6; i <= 20; i++) {
+  const id = i < 10 ? `1744370400000-${i}` : `174${4370400000 - (i-9)*86400000}-${i}`;
+  
+  if (!jobs.find(job => job.id === id)) {
+    jobs.push({
+      ...jobs.find(job => +job.id.split('-')[1] === (i <= 5 ? i : 5))!,
+      id,
+      title: jobs.find(job => job.id === id)?.title || "Position Open",
+      category: jobs.find(job => job.id === id)?.category || "General",
+      status: jobs.find(job => job.id === id)?.status || "active",
+      description: "Detailed job description will be provided during the interview process.",
+      responsibilities: [
+        "Complete assigned tasks and projects within deadlines",
+        "Collaborate with team members to achieve objectives",
+        "Stay updated with industry trends and best practices",
+        "Participate in team meetings and provide input",
+        "Document processes and procedures as required"
+      ],
+      requirements: [
+        "Relevant degree or certification in the field",
+        "Experience with industry-standard tools and technologies",
+        "Strong analytical and problem-solving skills",
+        "Excellent communication and teamwork abilities",
+        "Attention to detail and commitment to quality"
+      ]
+    });
+  }
+}
 
