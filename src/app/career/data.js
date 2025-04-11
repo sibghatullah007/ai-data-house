@@ -87,7 +87,7 @@ export const jobs = [
     locationType: "Hybrid",
     location: "Islamabad, Pakistan",
     posted: new Date("2025-04-11T14:00:00"),
-    status: "active",
+    status: "closed",
     description: "We are looking for a Full Stack Developer to build and maintain web applications. You will work on both frontend and backend development to create seamless user experiences and robust application functionality.",
     responsibilities: [
       "Develop responsive and user-friendly web interfaces using modern frameworks",
@@ -113,7 +113,7 @@ export const jobs = [
     locationType: "Remote",
     location: "Islamabad, Pakistan",
     posted: new Date("2025-04-11T14:00:00"),
-    status: "active",
+    status: "closed",
     description: "We are seeking an experienced Data Architect to design and implement our data management systems. You will be responsible for defining data structures, models, and integration patterns across our organization.",
     responsibilities: [
       "Design comprehensive data architecture solutions",
