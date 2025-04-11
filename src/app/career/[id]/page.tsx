@@ -2,12 +2,14 @@ import Image from "next/image"
 import { notFound } from "next/navigation"
 import { jobs, Job } from "../../career/data"
 
-type Props = {
-  params: { id: string }
-  searchParams?: { [key: string]: string | string[] | undefined }
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: PageProps) {
   const job = jobs.find((job: Job) => job.id === params.id)
   
   if (!job) {
