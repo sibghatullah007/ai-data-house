@@ -132,33 +132,3 @@ export const jobs = [
     ]
   }
 ];
-
-// Add default values for remaining jobs (will display generic content)
-for (let i = 6; i <= 20; i++) {
-  const id = i < 10 ? `1744370400000-${i}` : `174${4370400000 - (i-9)*86400000}-${i}`;
-  
-  if (!jobs.find(job => job.id === id)) {
-    jobs.push({
-      ...jobs.find(job => +job.id.split('-')[1] === (i <= 5 ? i : 5)),
-      id,
-      title: jobs.find(job => job.id === id)?.title || "Position Open",
-      category: jobs.find(job => job.id === id)?.category || "General",
-      status: jobs.find(job => job.id === id)?.status || "active",
-      description: "Detailed job description will be provided during the interview process.",
-      responsibilities: [
-        "Complete assigned tasks and projects within deadlines",
-        "Collaborate with team members to achieve objectives",
-        "Stay updated with industry trends and best practices",
-        "Participate in team meetings and provide input",
-        "Document processes and procedures as required"
-      ],
-      requirements: [
-        "Relevant degree or certification in the field",
-        "Experience with industry-standard tools and technologies",
-        "Strong analytical and problem-solving skills",
-        "Excellent communication and teamwork abilities",
-        "Attention to detail and commitment to quality"
-      ]
-    });
-  }
-} 
