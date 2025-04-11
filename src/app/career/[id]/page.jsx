@@ -1,19 +1,13 @@
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { jobs, Job } from "../../career/data"
+import { jobs } from "../data"
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export default async function Page({ params }: PageProps) {
-  const job = jobs.find((job: Job) => job.id === params.id)
-  
+export default async function Page({ params }) {
+  const { id } = await params;
+  const job = jobs.find(job => job.id == id);
+  console.log(job);
   if (!job) {
-    notFound()
+    notFound();
   }
   
   return (
