@@ -13,22 +13,22 @@ const Page = () => {
           <form className="space-y-2">
             <div className="flex flex-col gap-2">
               <div>
-                <input placeholder="Your name & surname*" type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
+                <input placeholder="Your name & surname*" type="text" name="name" className="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
               </div>
               <div>
-                <input placeholder="Your email address*" type="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
+                <input placeholder="Your email address*" type="email" name="email" className="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
               </div>
               <div>
-                <input placeholder="Your phone number*" type="tel" name="phone" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
+                <input placeholder="Your phone number*" type="tel" name="phone" className="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
               </div>
               <div>
-                <input placeholder="Company Name" type="text" name="company" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" />
+                <input placeholder="Company Name" type="text" name="company" className="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" />
               </div>
               <div>
-                <input placeholder="Region from where you are*" type="text" name="region" className=" w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
+                <input placeholder="Region from where you are*" type="text" name="region" className=" w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required />
               </div>
               <div>
-                <textarea placeholder="Explain your project idea*" name="project" rows={3} className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required></textarea>
+                <textarea placeholder="Explain your project idea*" name="project" rows={3} className="w-full px-4 py-3 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-green-600" required></textarea>
               </div>
             </div>
 
