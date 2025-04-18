@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { jobs } from "../data"
+import Contact from "@/components/Contact";
 
 export default async function Page({ params }) {
   const { id } = await params;
@@ -99,6 +100,7 @@ export default async function Page({ params }) {
           </div>
         </div>
       </section>
+      <Contact />
     </>
   )
 }

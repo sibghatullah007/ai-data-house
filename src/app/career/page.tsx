@@ -1,6 +1,7 @@
 import Image from "next/image"
 import JobListings from "./components/JobListings"
 import { jobs } from "./data"
+import Contact from "@/components/Contact";
 
 export default function Page() {
   return (
@@ -25,6 +26,7 @@ export default function Page() {
       </section>
 
       <JobListings initialJobs={jobs} />
+      <Contact />
     </>
   );
 }
