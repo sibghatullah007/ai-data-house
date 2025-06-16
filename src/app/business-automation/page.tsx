@@ -7,6 +7,7 @@ import { FaBrain, FaChartLine, FaMobile, FaRecycle } from "react-icons/fa6";
 import { motion} from "framer-motion";
 import Masonry from 'react-masonry-css';
 import MagneticButton from "@/components/MagneticButton";
+import Link from 'next/link';
 
 export default function PrintingCRMLandingPage() {
     const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -46,7 +47,7 @@ export default function PrintingCRMLandingPage() {
         {
             name: "Dylan Brooks",
             position: "Operations Lead",
-            message: "Love how mobile-friendly it is. I can check job status while grabbing coffee! It's great because I don’t have to be at my desk all the time. I can monitor progress and make adjustments on the go. This has really boosted my productivity and kept me in the loop no matter where I am.",
+            message: "Love how mobile-friendly it is. I can check job status while grabbing coffee! It's great because I don't have to be at my desk all the time. I can monitor progress and make adjustments on the go. This has really boosted my productivity and kept me in the loop no matter where I am.",
             rating: 4
         },
         {
@@ -64,7 +65,7 @@ export default function PrintingCRMLandingPage() {
         {
             name: "Taylor Lee",
             position: "CEO, QuickPrint Co.",
-            message: "The automation helped us scale up without hiring more people. Absolute win. The platform handles so much of the routine work automatically, allowing us to focus on higher-value tasks. We've been able to take on more clients and complete jobs faster, all while maintaining the same team size. It has been a huge benefit to our company’s growth. The CRM has made me feel like I have a full team behind me, even though I'm working solo.",
+            message: "The automation helped us scale up without hiring more people. Absolute win. The platform handles so much of the routine work automatically, allowing us to focus on higher-value tasks. We've been able to take on more clients and complete jobs faster, all while maintaining the same team size. It has been a huge benefit to our company's growth. The CRM has made me feel like I have a full team behind me, even though I'm working solo.",
             rating: 5
         },
         {
@@ -76,19 +77,19 @@ export default function PrintingCRMLandingPage() {
         {
             name: "Hannah Green",
             position: "Marketing Director",
-            message: "The insights we get from this CRM help us make smarter decisions every day. Couldn't ask for a better tool. The detailed analytics it provides help us adjust our marketing strategies in real time, making sure that we’re always ahead of the curve. We've seen a noticeable improvement in our campaign effectiveness since we started using it.",
+            message: "The insights we get from this CRM help us make smarter decisions every day. Couldn't ask for a better tool. The detailed analytics it provides help us adjust our marketing strategies in real time, making sure that we're always ahead of the curve. We've seen a noticeable improvement in our campaign effectiveness since we started using it.",
             rating: 5
         },
         {
             name: "Liam Fisher",
             position: "Business Analyst",
-            message: "It's been a game-changer for tracking our KPIs and analyzing trends. We’re making data-driven decisions now! The platform allows us to visualize complex data in easy-to-understand formats, giving us clear insights into how our business is performing. It’s become an essential tool for all our strategic planning.",
+            message: "It's been a game-changer for tracking our KPIs and analyzing trends. We're making data-driven decisions now! The platform allows us to visualize complex data in easy-to-understand formats, giving us clear insights into how our business is performing. It's become an essential tool for all our strategic planning.",
             rating: 4
         },
         {
             name: "Olivia Parker",
             position: "Account Manager",
-            message: "Managing client relationships has never been easier. I can see everything I need in one place! I can track conversations, projects, deadlines, and even client feedback all in a single dashboard. It’s made client communication and management so much more efficient. My clients are happier because we're always on top of their needs, and that makes my job much easier too.",
+            message: "Managing client relationships has never been easier. I can see everything I need in one place! I can track conversations, projects, deadlines, and even client feedback all in a single dashboard. It's made client communication and management so much more efficient. My clients are happier because we're always on top of their needs, and that makes my job much easier too.",
             rating: 5
         }
     ];
@@ -142,7 +143,9 @@ export default function PrintingCRMLandingPage() {
                     Powerful automation, seamless scheduling, and financial clarity—all in one tailored CRM platform.
                 </p>
                 <div className="z-10">
-                    <MagneticButton>Get Started for Free</MagneticButton>
+                    <Link href="/contact">
+                        <MagneticButton>Get Started for Free</MagneticButton>
+                    </Link>
                 </div>
             </section>
             {/* Problem / Pain Points Section */}
@@ -191,7 +194,9 @@ export default function PrintingCRMLandingPage() {
                     ))}
                 </div>
                 <div className="mt-8 flex justify-center">
-                    <MagneticButton>Let's Talk</MagneticButton>
+                    <Link href="/contact">
+                        <MagneticButton>Let's Talk</MagneticButton>
+                    </Link>
                 </div>
             </section>
 
@@ -394,9 +399,11 @@ export default function PrintingCRMLandingPage() {
             <section className="px-6 md:px-16 py-20 text-center bg-dark-green-custom text-white">
                 <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Printing Business?</h2>
                 <p className="text-lg mb-8">Start optimizing today—no credit card required.</p>
-                <Button className="bg-white text-dark-green-custom px-8 py-3 text-lg">
-                    Get Started for Free
-                </Button>
+                <Link href="/contact">
+                    <Button className="bg-white text-dark-green-custom px-8 py-3 text-lg">
+                        Get Started for Free
+                    </Button>
+                </Link>
             </section>
         </div>
     );

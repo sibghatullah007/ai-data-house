@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Target, Award, Zap, Database, Code2, Cloud } from 'lucide-react';
 import { FaUserCircle, FaStar, FaRegStar } from 'react-icons/fa';
@@ -127,9 +128,13 @@ const AboutPage = () => {
           >
             We are a team of passionate experts dedicated to helping businesses thrive in the digital age through innovative data solutions and automation.
           </motion.p>
-          <MagneticButton className='bg-green-800 text-white rounded-full hover:bg-green-900 px-4 py-2'>
-            Get in Touch
-          </MagneticButton>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <MagneticButton className='bg-green-800 text-white rounded-full hover:bg-green-900 px-4 py-2'>
+                Get in Touch
+              </MagneticButton>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -238,7 +243,8 @@ const AboutPage = () => {
 
       {/* Testimonials Section */}
       <section className="px-6 md:px-16 py-20 bg-gray-50">
-        <h2 className="text-3xl font-bold mb-10 text-center">What Our Clients Say</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-green-700 my-4 text-center">
+      What Our Clients Say</h2>
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="flex gap-6"
@@ -282,9 +288,11 @@ const AboutPage = () => {
           <p className="text-lg mb-8 max-w-3xl mx-auto">
             Join the growing list of businesses that trust AI Data House for their digital transformation journey
           </p>
-          <MagneticButton className="bg-white text-green-700 hover:bg-gray-100 px-4 py-3 rounded-full">
-            Start Your Journey
-          </MagneticButton>
+          <Link href="/contact">
+            <MagneticButton className="bg-white text-green-700 hover:bg-gray-100 px-4 py-3 rounded-full">
+              Start Your Journey
+            </MagneticButton>
+          </Link>
         </div>
       </section>
     </main>

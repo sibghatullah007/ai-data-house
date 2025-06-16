@@ -5,6 +5,8 @@ import { FaDatabase, FaComments, FaBrain, FaCogs } from "react-icons/fa";
 import OrbitAnimation from "./OrbitAnimation";
 import { motion } from "framer-motion";
 import MagneticButton from "./MagneticButton";
+import React from 'react';
+import Link from 'next/link';
 
 const Services = () => {
   return (
@@ -68,9 +70,13 @@ const Services = () => {
           Streamline operations and enhance customer engagement with our AI, Data Engineering,
           Chatbot Development, and Automation solutions. Let's take your business to the next level!
         </p>
-        <MagneticButton className="mt-4 bg-light-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition">
-          Let's Get Started
-        </MagneticButton>
+        <div className="text-center mt-12">
+          <Link href="/contact">
+            <MagneticButton className="bg-green-700 text-white hover:bg-green-800 px-8 py-3 rounded-full">
+              Let's Get Started
+            </MagneticButton>
+          </Link>
+        </div>
       </motion.div>
     </section>
   );

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaPrint, FaShoppingCart, FaHospital, FaChartLine } from 'react-icons/fa';
 import MagneticButton from '@/components/MagneticButton';
@@ -77,7 +78,7 @@ const CaseStudiesPage = () => {
     }
   ];
 
-  return (
+    return (
     <main className="min-h-screen pt-[70px]">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-green-50 to-green-100">
@@ -197,9 +198,11 @@ const CaseStudiesPage = () => {
           <p className="text-lg mb-8 max-w-3xl mx-auto">
             Let's discuss how we can help you achieve similar results
           </p>
-          <MagneticButton className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-full">
-            Schedule a Consultation
-          </MagneticButton>
+          <Link href="/contact">
+            <MagneticButton className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 rounded-full">
+              Schedule a Consultation
+            </MagneticButton>
+          </Link>
         </div>
       </section>
     </main>

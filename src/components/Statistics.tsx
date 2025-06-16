@@ -1,6 +1,8 @@
 'use client'
+import React from 'react';
 import { motion } from "framer-motion";
 import MagneticButton from "./MagneticButton";
+import Link from 'next/link';
 
 const Statistics = () => {
   return (
@@ -59,13 +61,12 @@ const Statistics = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="mt-12">
-        <h3 className="text-xl font-semibold text-green-900">
-          Let's Build Something Amazing!
-        </h3>
-        <MagneticButton className="mt-4 px-6 py-3 bg-green-700 hover:bg-green-800 text-white rounded-full font-semibold">
-          Get in touch
-        </MagneticButton>
+      <div className="text-center mt-12">
+        <Link href="/contact">
+          <MagneticButton className="bg-green-700 text-white hover:bg-green-800 px-8 py-3 rounded-full">
+            Get in touch
+          </MagneticButton>
+        </Link>
       </div>
     </section>
   );

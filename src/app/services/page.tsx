@@ -7,6 +7,7 @@ import MagneticButton from '@/components/MagneticButton';
 import ServiceCard from '../../components/ServiceCard';
 import Statistics from '@/components/Statistics';
 import VideoReviews from '@/components/VideoReviews';
+import Link from 'next/link';
 
 const ServicesPage = () => {
   const services = [
@@ -128,9 +129,13 @@ const ServicesPage = () => {
           >
             Unlock the power of data analytics, AI, and business intelligence to drive growth and innovation
           </motion.p>
-          <MagneticButton className='bg-green-800 rounded-full hover:bg-green-900 px-4 py-2'>
-            Get Started
-          </MagneticButton>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <Link href="/contact">
+              <MagneticButton className="bg-green-700 text-white hover:bg-green-800 px-8 py-3 rounded-full">
+                Get Started
+              </MagneticButton>
+            </Link>
+          </div>
         </div>
       </section>
 
