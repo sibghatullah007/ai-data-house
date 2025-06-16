@@ -2,6 +2,7 @@
 import { FC } from 'react';
 import { LuPhoneCall } from "react-icons/lu";
 import { IoMailUnreadOutline } from "react-icons/io5";
+import MagneticButton from './MagneticButton';
 
 const Contact: FC = () => {
   return (
@@ -76,9 +77,9 @@ const Contact: FC = () => {
                 rows={1}
                 required
               ></textarea>
-              <button className="bg-light-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition border border-6 border-white">
+              <MagneticButton className="bg-light-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition border border-6 border-white">
                 Send
-              </button>
+              </MagneticButton>
             </form>
           </div>
         </div>

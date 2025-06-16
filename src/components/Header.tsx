@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-
+import MagneticButton from "./MagneticButton";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -76,9 +76,9 @@ export default function Header() {
                 </div>
                 <div className={`absolute top-0 left-full bg-white shadow-lg w-52 rounded-md transition-all duration-300 ease-out border border-gray-300
                   ${openSubmenu === "courses" ? "opacity-100 translate-x-0 visible" : "opacity-0 -translate-x-2 invisible"}`}>
-                  <Link href="/course/automation" className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">Automation Essentials</Link>
-                  <Link href="/course/ai-fundamentals" className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">AI Fundamentals</Link>
-                  <Link href="/course/nocode-tools" className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">No-Code Tools</Link>
+                  <Link href="https://www.aidataschool.com/" target="blank"  className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">Web Development</Link>
+                  <Link href="https://www.aidataschool.com/" target="blank"  className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">Artificial Intellingence</Link>
+                  <Link href="https://www.aidataschool.com/" target="blank"  className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">Data Analysis</Link>
                 </div>
               </div>
               
@@ -88,9 +88,11 @@ export default function Header() {
 
         {/* CTA */}
         <div className="hidden md:flex">
+          <MagneticButton>
           <Link href="/contact" className="bg-light-green-custom text-white px-6 font-semibold flex items-center justify-center h-[70px] w-[120px] text-nowrap">
             Let’s Talk
           </Link>
+          </MagneticButton>
         </div>
 
         {/* Mobile Button */}
@@ -124,9 +126,9 @@ export default function Header() {
                   <ChevronDown className="ml-2 w-4 h-4" />
                 </summary>
                 <div className="pl-4 mt-2">
-                  <Link href="/business-automation" className="block py-1 text-dark-green-custom">Business Automation</Link>
-                  <Link href="/ai-chat-agent" className="block py-1 text-dark-green-custom">AI Chat Agent</Link>
-                  <Link href="/data-analysis" className="block py-1 text-dark-green-custom">Data Analysis</Link>
+                  <Link href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">Business Automation</Link>
+                  <Link href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">AI Chat Agent</Link>
+                  <Link href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">Data Analysis</Link>
                 </div>
               </details>
 
@@ -136,9 +138,9 @@ export default function Header() {
                   <ChevronDown className="ml-2 w-4 h-4" />
                 </summary>
                 <div className="pl-4 mt-2">
-                  <Link href="/course/automation" className="block py-1 text-dark-green-custom">Automation Essentials</Link>
-                  <Link href="/course/ai-fundamentals" className="block py-1 text-dark-green-custom">AI Fundamentals</Link>
-                  <Link href="/course/nocode-tools" className="block py-1 text-dark-green-custom">No-Code Tools</Link>
+                  <Link href="/course/automation" className="block py-1 text-dark-green-custom">Web Development</Link>
+                  <Link href="/course/ai-fundamentals" className="block py-1 text-dark-green-custom">Artificial Intellingence</Link>
+                  <Link href="/course/nocode-tools" className="block py-1 text-dark-green-custom">Data Analysis</Link>
                 </div>
               </details>
             </div>

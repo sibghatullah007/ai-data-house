@@ -1,6 +1,10 @@
+'use client'
 // import Image from "next/image";
+
 import { FaDatabase, FaComments, FaBrain, FaCogs } from "react-icons/fa";
 import OrbitAnimation from "./OrbitAnimation";
+import { motion } from "framer-motion";
+import MagneticButton from "./MagneticButton";
 
 const Services = () => {
   return (
@@ -52,18 +56,22 @@ const Services = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="mt-12 bg-white shadow-lg rounded-lg p-6 md:p-8 text-center">
+      <motion.div 
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        className="mt-12 bg-white shadow-lg rounded-lg p-6 md:p-8 text-center"
+      >
         <h3 className="text-lg md:text-xl font-semibold text-green-700">
           Ready to Transform Your <span className="text-green-900">Business</span>?
         </h3>
         <p className="text-gray-600 mt-2">
           Streamline operations and enhance customer engagement with our AI, Data Engineering,
-          Chatbot Development, and Automation solutions. Let’s take your business to the next level!
+          Chatbot Development, and Automation solutions. Let's take your business to the next level!
         </p>
-        <button className="mt-4 bg-light-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition">
+        <MagneticButton className="mt-4 bg-light-green-custom text-white px-6 py-2 rounded-full font-semibold hover:bg-green-800 transition">
           Let's Get Started
-        </button>
-      </div>
+        </MagneticButton>
+      </motion.div>
     </section>
   );
 };
@@ -77,13 +85,17 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
   return (
-    <div className="bg-white shadow-lg p-4 md:p-6 rounded-lg flex items-center justify-between ">
+    <motion.div 
+      whileHover={{ scale: 1.05, rotate: 2 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="bg-white shadow-lg p-4 md:p-6 rounded-lg flex items-center justify-between hover:shadow-xl hover:border hover:border-gray-300 cursor-pointer"
+    >
       <div>
         <h4 className="font-semibold text-green-900 text-lg">{title}</h4>
         <p className="text-gray-600 text-sm">{description}</p>
       </div>
       <div className="flex-shrink-0">{icon}</div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import dashboardImg from '../../public/dashboard.png'; // Replace with actual images
 import dashboardImg2 from '../../public/dashboard2.png'; // Replace with actual images
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import MagneticButton from './MagneticButton';
 
 const stories = [
   {
@@ -58,24 +59,33 @@ const SuccessStories = () => {
     setAnimate(true);
   }, [currentIndex]);
 
+  // Add auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]); // Reset interval when currentIndex changes
+
   const currentStory = stories[currentIndex];
 
   return (
     <section className="bg-green-800 text-white px-6 md:pt-8 rounded-3xl relative overflow-hidden">
       {/* Arrows */}
       <div className="flex justify-center gap-2 my-8 md:absolute top-[0px] right-10 z-30">
-        <button
+        <MagneticButton
           onClick={handlePrev}
           className="flex w-10 h-10 rounded-full bg-white text-green-800 hover:bg-gray-200 transition justify-center items-center"
         >
           <FaArrowLeft />
-        </button>
-        <button
+        </MagneticButton>
+        <MagneticButton
           onClick={handleNext}
           className="flex w-10 h-10 rounded-full bg-white text-green-800 hover:bg-gray-200 transition justify-center items-center"
         >
           <FaArrowRight />
-        </button>
+        </MagneticButton>
       </div>
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto mb-12">
@@ -83,7 +93,7 @@ const SuccessStories = () => {
           Success Stories That Speak
         </h2>
         <p className="text-sm md:text-base mt-2 text-gray-200">
-          Discover how we’ve empowered businesses with data-driven innovations,
+          Discover how we've empowered businesses with data-driven innovations,
           AI solutions, and automation to achieve extraordinary results.
         </p>
       </div>

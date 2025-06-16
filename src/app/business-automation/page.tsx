@@ -4,48 +4,9 @@ import { Button } from "@/components/ui/button";
 import { FaCheckCircle, FaTimesCircle, FaMobileAlt, FaClock, FaMoneyBillWave, FaLock, FaUsers, FaUserCircle, FaStar, FaRegStar } from "react-icons/fa";
 import { useState } from "react";
 import { FaBrain, FaChartLine, FaMobile, FaRecycle } from "react-icons/fa6";
-import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { motion} from "framer-motion";
 import Masonry from 'react-masonry-css';
-
-const MagneticButton = ({ children }: { children: React.ReactNode }) => {
-    const ref = useRef<HTMLButtonElement>(null);
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const springX = useSpring(x, { stiffness: 300, damping: 20 });
-    const springY = useSpring(y, { stiffness: 300, damping: 20 });
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (!ref.current) return;
-        const rect = ref.current.getBoundingClientRect();
-        const offsetX = e.clientX - rect.left - rect.width / 2;
-        const offsetY = e.clientY - rect.top - rect.height / 2;
-        x.set(offsetX * 0.3); // Control magnetic strength
-        y.set(offsetY * 0.3);
-    };
-
-    const handleMouseLeave = () => {
-        x.set(0);
-        y.set(0);
-    };
-
-    return (
-        <motion.button
-            ref={ref}
-            className="bg-dark-green-custom text-white px-8 py-3 text-lg rounded-lg relative z-10"
-            style={{
-                x: springX,
-                y: springY
-            }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-        >
-            {children}
-        </motion.button>
-    );
-};
-
-
+import MagneticButton from "@/components/MagneticButton";
 
 export default function PrintingCRMLandingPage() {
     const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -155,18 +116,7 @@ export default function PrintingCRMLandingPage() {
 
     return (
         <div className="pt-[70px] bg-gray-50 text-gray-800">
-            {/* Hero Section */}
-            {/* <section className="px-6 md:px-16 py-20 text-center bg-white min-h-screen flex flex-col justify-center items-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
-                    Revolutionize Your Printing Business
-                </h1>
-                <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-                    Powerful automation, seamless scheduling, and financial clarity—all in one tailored CRM platform.
-                </p>
-                <MagneticButton>Get Started for Free</MagneticButton>
-            </section> */}
             <section
-                // 👉 Enable relative positioning & mouse tracking
                 onMouseMove={handleMouseMove}
                 className="relative px-6 md:px-16 py-20 text-center bg-white min-h-screen flex flex-col justify-center items-center overflow-hidden"
             >

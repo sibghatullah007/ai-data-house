@@ -6,6 +6,7 @@ import Technologies from "@/components/Technologies";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import QuoteSection from "@/components/Quote";
+import VideoReviews from "@/components/VideoReviews";
 
 
 export default function Home() {
@@ -17,7 +18,8 @@ export default function Home() {
       <Statistics />
       <SuccessStories />
       <Technologies />
-      <Blog />
+      {/* <Blog /> */}
+      <VideoReviews/>
       <Contact />
     </main>
   );

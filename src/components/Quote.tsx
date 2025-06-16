@@ -1,10 +1,16 @@
+'use client'
 import Image from "next/image";
 import { MdOutlineFormatQuote } from "react-icons/md";
+import { motion } from "framer-motion";
 
-const QuoteSection = () => {
+const Quote = () => {
     return (
         <section className="py-8 px-4">
-            <div className="bg-white shadow-lg border-l-4 border-light-green-custom p-6 md:px-10 rounded-lg max-w-[55rem] mx-auto relative">
+            <motion.div 
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                className="bg-white shadow-lg border-l-4 border-light-green-custom p-6 md:px-10 rounded-lg max-w-[55rem] mx-auto relative"
+            >
                 <p className="text-lg text-dark-green-custom font-semibold leading-relaxed text-justify hyphens-auto pe-10 md:pe-4">
                     Artificial Intelligence, data analysis, and automation are no longer
                     optional they are the driving forces behind modern business success.
@@ -32,9 +38,9 @@ const QuoteSection = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
 
-export default QuoteSection;
+export default Quote;
