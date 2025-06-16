@@ -59,8 +59,6 @@ export default function Header() {
                 <div className={`absolute top-0 left-full bg-white shadow-lg w-52 rounded-md transition-all duration-300 ease-out border border-gray-300
                   ${openSubmenu === "solutions" ? "opacity-100 translate-x-0 visible" : "opacity-0 -translate-x-2 invisible"}`}>
                   <Link href="/business-automation" className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">Business Automation</Link>
-                  <Link href="/ai-chat-agent" className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">AI Chat Agent</Link>
-                  <Link href="/data-analysis" className="block px-4 py-3 text-dark-green-custom hover:bg-gray-100">Data Analysis</Link>
                 </div>
               </div>
 
@@ -126,9 +124,7 @@ export default function Header() {
                   <ChevronDown className="ml-2 w-4 h-4" />
                 </summary>
                 <div className="pl-4 mt-2">
-                  <Link href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">Business Automation</Link>
-                  <Link href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">AI Chat Agent</Link>
-                  <Link href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">Data Analysis</Link>
+                  <Link href="/business-automation" target="_blank" className="block py-1 text-dark-green-custom">Business Automation</Link>
                 </div>
               </details>
 
@@ -138,9 +134,9 @@ export default function Header() {
                   <ChevronDown className="ml-2 w-4 h-4" />
                 </summary>
                 <div className="pl-4 mt-2">
-                  <Link href="/course/automation" className="block py-1 text-dark-green-custom">Web Development</Link>
-                  <Link href="/course/ai-fundamentals" className="block py-1 text-dark-green-custom">Artificial Intellingence</Link>
-                  <Link href="/course/nocode-tools" className="block py-1 text-dark-green-custom">Data Analysis</Link>
+                  <Link href="https://www.aidataschool.com/" target="_blank"  className="block py-1 text-dark-green-custom">Web Development</Link>
+                  <Link  href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">Artificial Intellingence</Link>
+                  <Link  href="https://www.aidataschool.com/" target="_blank" className="block py-1 text-dark-green-custom">Data Analysis</Link>
                 </div>
               </details>
             </div>
